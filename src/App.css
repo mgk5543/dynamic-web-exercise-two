@@ -1,0 +1,90 @@
+h1{
+    font-size: 68px;
+    font-weight: 400;
+}
+
+.page-wrapper{
+    border: 0px;
+    font-family: arial, sans-serif;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 75%;
+}
+
+.article-card{
+    border: 1px solid black;
+    display: flex;
+    margin-bottom: 40px;
+    padding: 25px;
+}
+
+.article-card-img{
+    background-color: lightgray;
+    flex-basis: 30%;
+    height: 220px;
+}
+
+.article-card-text{
+    flex-basis: 70%;
+    margin-left: 30px;
+}
+
+.article-card-text h2{
+    margin-top: 20px;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 0;
+}
+
+.article-card-text p{
+    font-size: 17px;
+}
+
+.article-card-text a{
+    font-size: 17px;
+    font-weight: 700;
+}
+
+
+.article-wrap{
+    margin: 0 auto;
+    max-width: 700px;
+}
+.article-header{
+    background-color: lightgray;
+    padding: 40px;
+}
+.article-header h1, p{
+    line-height: 1;
+}
+
+.article-title{
+    font-size: 70px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.article-date{
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.article-blurb{
+    font-size: 24px;
+}
+
+.article-text{
+    margin: 60px 0;
+}
+.article-text h2{
+    font-size: 36px;
+    font-weight: bold;
+}
+.article-text h3{
+    font-size: 26px;
+    font-weight: bold;
+}
+.article-text p{
+    font-size: 18px;
+    line-height: 1.2;
+}
