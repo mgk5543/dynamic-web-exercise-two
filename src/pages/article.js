@@ -1,11 +1,22 @@
 import React from 'react';
+import { useParams } from "react-router";
+import Data from '../components/data';
 
 function Article({ title, date, blurb }) {
+    const { id } = useParams();
+
+    const articleData = Data.find((article) => article.id === id)
+
     return(
         <main>
-            <header className="article-header">
+            <header className="article-header"
+                style={{
+                    backgroundImage:"",
+                    backgroundSize: "cover",
+                }}
+            >
                 <div className="article-wrap">
-                    <h1 className="article-title">{title}</h1>
+                    <h1 className="article-title">{articleData.title}</h1>
                     <p className="article-date">{date}</p>
                     <p className="article-blurb">{blurb}</p>
                 </div>
