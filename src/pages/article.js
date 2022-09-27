@@ -5,10 +5,9 @@ function Article({ title, date, blurb }) {
         <main>
             <header className="article-header">
                 <div className="article-wrap">
-                    <h1 className="article-title">{title}Article Title</h1>
-                    <p className="article-date">{date}Wednesday, September 22, 2022</p>
-                    <p className="article-blurb">{blurb}Note that this is the article blurb. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-                        incididunt ut lab.</p>
+                    <h1 className="article-title">{title}</h1>
+                    <p className="article-date">{date}</p>
+                    <p className="article-blurb">{blurb}</p>
                 </div>
             </header>
             <section>

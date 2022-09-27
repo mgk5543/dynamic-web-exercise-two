@@ -1,6 +1,6 @@
 import React from 'react';
 
-function ArticleCard({ blurb, date, imageAlt, imageSrc, title }){
+function ArticleCard({ blurb, date, id, imageAlt, imageSrc, title }){
     //TODO: make sure to go over link
     return(
         <div className="article-card">
@@ -9,7 +9,7 @@ function ArticleCard({ blurb, date, imageAlt, imageSrc, title }){
                 <h2>{title}</h2>
                 <p>{date}</p>
                 <p>{blurb}</p>
-                <a href="#">Read More</a>
+                <a href={`/article/${id}`}>Read More</a>
             </div>
         </div>
     )
