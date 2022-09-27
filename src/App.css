@@ -19,7 +19,6 @@ h1{
 }
 
 .article-card-img{
-    background-color: lightgray;
     flex-basis: 30%;
     height: 220px;
 }
