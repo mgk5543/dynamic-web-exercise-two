@@ -31,46 +31,23 @@ function Article() {
             <section>
                 <div className="article-wrap">
                     <div className="article-text">
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                            sed do eiusmod tempor incididunt ut labore et dolore magna 
-                            aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-                            ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis 
-                            aute irure dolor in reprehenderit in voluptate velit esse 
-                            cillum dolore eu fugiat nulla pariatur. Excepteur sint 
-                            occaecat cupidatat non proident, sunt in culpa qui officia 
-                            deserunt mollit anim id est laborum.
-                        </p>
-                        <h2>Header Two Inserted</h2>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                            sed do eiusmod tempor incididunt ut labore et dolore magna 
-                            aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-                            ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis 
-                            aute irure dolor in reprehenderit in voluptate velit esse 
-                            cillum dolore eu fugiat nulla pariatur. Excepteur sint 
-                            occaecat cupidatat non proident, sunt in culpa qui officia 
-                            deserunt mollit anim id est laborum.
-                        </p>
-                        <h3>Header Three Inserted</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                            sed do eiusmod tempor incididunt ut labore et dolore magna 
-                            aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-                            ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis 
-                            aute irure dolor in reprehenderit in voluptate velit esse 
-                            cillum dolore eu fugiat nulla pariatur. Excepteur sint 
-                            occaecat cupidatat non proident, sunt in culpa qui officia 
-                            deserunt mollit anim id est laborum.<br/> <br/>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                            sed do eiusmod tempor incididunt ut labore et dolore magna 
-                            aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-                            ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis 
-                            aute irure dolor in reprehenderit in voluptate velit esse 
-                            cillum dolore eu fugiat nulla pariatur. Excepteur sint 
-                            occaecat cupidatat non proident, sunt in culpa qui officia 
-                            deserunt mollit anim id est laborum.
-                        </p>
+                        {articleData.articleText.map((text, i) => {
+                            const type = text.type;
+                            switch (type) {
+                                case "p":
+                                    return <p key={i}>{text.data}</p>;
+                                case "h1":
+                                    return <h1 key={i}>{text.data}</h1>;
+                                case "h2":
+                                    return <h2 key={i}>{text.data}</h2>;
+                                case "h3":
+                                    return <h3 key={i}>{text.data}</h3>;
+                                case "h4":
+                                    return <h4 key={i}>{text.data}</h4>;
+                                default:
+                                    return <p key={i}>{text.data}</p>;
+                            }
+                        })}
                     </div>
                 </div>
             </section>
