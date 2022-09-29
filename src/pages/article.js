@@ -1,24 +1,31 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { useParams } from "react-router";
 import Data from '../components/data';
 
-function Article({ title, date, blurb }) {
+function Article() {
     const { id } = useParams();
 
     const articleData = Data.find((article) => article.id === id)
+
+    const articleDate = useMemo(() => {
+        if(!articleData) return "";
+        const parsedDate = new Date(articleData.publishedDate);
+        return parsedDate.toDateString();
+    }, [articleData]);
 
     return(
         <main>
             <header className="article-header"
                 style={{
-                    backgroundImage:"",
+                    backgroundImage: `url('${articleData.image.url}')`,
+                    backgroundPosition: "center",
                     backgroundSize: "cover",
                 }}
             >
                 <div className="article-wrap">
                     <h1 className="article-title">{articleData.title}</h1>
-                    <p className="article-date">{date}</p>
-                    <p className="article-blurb">{blurb}</p>
+                    <p className="article-date">{articleDate}</p>
+                    <p className="article-blurb">{articleData.blurb}</p>
                 </div>
             </header>
             <section>

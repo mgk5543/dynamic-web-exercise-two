@@ -29,10 +29,11 @@ h1{
 }
 
 .article-card-text h2{
-    margin-top: 20px;
+    margin-top: 0px;
     font-size: 36px;
     font-weight: 700;
-    line-height: 0;
+    line-height: 1;
+
 }
 
 .article-card-text p{
@@ -50,7 +51,6 @@ h1{
     max-width: 700px;
 }
 .article-header{
-    background-color: lightgray;
     padding: 40px;
 }
 .article-header h1, p{
